@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body ng-controller="mainController">
+
+    <h1 class="heroes">List of your new Allies</h1>
+    <h2 class="heroes">Search for your favorite</h2>
+
+    <input class="heroes" type="text" ng-model="filter.name">
+    <ul>
+        <li class="heroes md-warn" ng-repeat="person in people | filter: {name : filter.name}">
+            <h3>Your Ally: {{person.name}}</h3>
+            <ol>
+                Year of Birth: {{person.birth_year}}
+            </ol>
+        </li>
+    </ul>
+
+
+    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+    <script src="./app/app.js "></script>
+    <script src="./app/main-controller.js "></script>
+</body>
+
+</html>

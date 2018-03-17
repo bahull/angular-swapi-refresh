@@ -1,0 +1,43 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: blue;
+}
+.heroes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  margin: auto;
+}
+
+@keyframes myChange {
+  from {
+    height: 100px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes yourChange {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100px;
+  }
+}
+div {
+  height: 100px;
+  background-color: lightblue;
+}
+
+div.ng-hide {
+  animation: 0.5s myChange;
+}
+
+div.ng-show {
+  animation: 0.5s yourChange;
+}
